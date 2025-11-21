@@ -121,3 +121,47 @@ setInterval(() => {
 // pipe(trim, toLowerCase, wrapInDiv)("    Javascript");
 
 // curry function using lodash
+
+// updating objects in javascript
+const person = {
+  name: "ali",
+  age: 25,
+  address: { city: "tehran", country: "iran" },
+};
+
+const updatedPerson = {
+  ...person,
+  age: 26,
+};
+
+// always use spread operator to create new object
+// if we use assignment operator it will point to same memory reference
+// so when we change the first object the second object will also change
+// be carefull
+const person2 = { ...person };
+person2.age = 26;
+console.log(person === person2); //true
+
+const a = Object.assign({}, person, { age: 30 });
+console.log("====================================");
+console.log(a === person); //false
+console.log("====================================");
+// Object.assign mutates the target object
+// what the main of mutate here ?
+
+
+// immutability
+// is the concept of not changing data in place but instead creating new copies with the desired changes.
+// helps to avoid unintended side effects and makes it easier to reason about code behavior over time.
+
+// benefits of immutability
+// 1. Predictability: Immutable data structures ensure that data does not change unexpectedly, making it easier to reason about code behavior over time.
+// 2. Easier Debugging: Since immutable data cannot be changed, it becomes simpler to track down bugs and understand the flow of data in an application.
+// 3. Improved Performance: Immutability can lead to performance optimizations, as it allows for efficient change detection and caching mechanisms.
+// 4. Concurrency: Immutable data structures are inherently thread-safe, making them suitable for concurrent programming scenarios.
+// 5. Time Travel Debugging: Immutability enables features like time travel debugging, where developers can easily revert to previous states of the application for analysis.
+// 6. Enhanced Maintainability: Code that relies on immutable data is often more maintainable, as it reduces the complexity associated with managing mutable state.
+
+
+import _ from "lodash";
+import  from 'imm'
