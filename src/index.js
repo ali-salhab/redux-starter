@@ -149,7 +149,6 @@ console.log("====================================");
 // Object.assign mutates the target object
 // what the main of mutate here ?
 
-
 // immutability
 // is the concept of not changing data in place but instead creating new copies with the desired changes.
 // helps to avoid unintended side effects and makes it easier to reason about code behavior over time.
@@ -162,6 +161,7 @@ console.log("====================================");
 // 5. Time Travel Debugging: Immutability enables features like time travel debugging, where developers can easily revert to previous states of the application for analysis.
 // 6. Enhanced Maintainability: Code that relies on immutable data is often more maintainable, as it reduces the complexity associated with managing mutable state.
 
-
-import _ from "lodash";
-import  from 'imm'
+// what is reducer function in reduc ?
+function reducer(store, action) {
+  return { ...store, af: 12 };
+}
